@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #FDF5E6; -fx-border-color: #8B4513; -fx-border-width: 4; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LandFarm">
+    <children>
+        <Button layoutX="25.0" layoutY="15.0" onAction="#selectCorn" style="-fx-background-color: #FFD700; -fx-text-fill: #5D4037; -fx-font-weight: bold; -fx-background-radius: 10;" text="Mais" />
+        <Button layoutX="85.0" layoutY="15.0" onAction="#selectTomato" style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Tomate" />
+        <Button layoutX="165.0" layoutY="15.0" onAction="#selectPumpkin" style="-fx-background-color: #FF8C00; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="Citrouille" />
+
+        <Label fx:id="moneyLabel" layoutX="400.0" layoutY="15.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white; -fx-padding: 5; -fx-border-color: #5D4037; -fx-border-width: 2; -fx-text-fill: green; -fx-font-weight: bold;" text="Argent : 50$" />
+
+        <Label layoutX="15.0" layoutY="70.0" style="-fx-font-weight: bold; -fx-text-fill: #3E2723;" text=" GRAINES :" />
+        <Label fx:id="seedStockLabel" layoutX="15.0" layoutY="90.0" prefHeight="60.0" prefWidth="120.0" text="Mais : 0&#10;Tomate : 0&#10;Citrouille : 0" />
+
+        <Label layoutX="15.0" layoutY="160.0" style="-fx-font-weight: bold; -fx-text-fill: #3E2723;" text=" RÉCOLTES :" />
+        <Label fx:id="veggieStockLabel" layoutX="15.0" layoutY="180.0" prefHeight="60.0" prefWidth="120.0" text="Mais : 0&#10;Tomate : 0&#10;Citrouille : 0" />
+
+        <GridPane fx:id="farmGrid" layoutX="150.0" layoutY="70.0" prefHeight="160.0" prefWidth="160.0" />
+
+        <Label layoutX="25.0" layoutY="260.0" style="-fx-font-weight: bold; -fx-text-fill: #3E2723;" text=" ACHETER GRAINES :" />
+        <Button layoutX="15.0" layoutY="285.0" onAction="#buyCorn" style="-fx-background-color: white; -fx-border-color: #FFD700; -fx-border-radius: 5;" text="Mais (1$)" />
+        <Button layoutX="91.0" layoutY="285.0" onAction="#buyTomato" style="-fx-background-color: white; -fx-border-color: #FF6347; -fx-border-radius: 5;" text="Tomate (2$)" />
+        <Button layoutX="183.0" layoutY="285.0" onAction="#buyPumpkin" style="-fx-background-color: white; -fx-border-color: #FF8C00; -fx-border-radius: 5;" text="Citrouille (5$)" />
+
+        <Label layoutX="25.0" layoutY="335.0" style="-fx-font-weight: bold; -fx-text-fill: #3E2723;" text=" VENDRE RÉCOLTE :" />
+        <Button layoutX="15.0" layoutY="360.0" onAction="#sellCorn" style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-radius: 5;" text="Vendre Mais" />
+        <Button layoutX="103.0" layoutY="360.0" onAction="#sellTomato" style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-radius: 5;" text="Vendre Tomate" />
+        <Button layoutX="207.0" layoutY="360.0" onAction="#sellPumpkin" style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-radius: 5;" text="Vendre Citrouille" />
+
+        <Button layoutX="306.0" layoutY="285.0" onAction="#selectChicken" style="-fx-background-color: white; -fx-border-color: #FFD700; -fx-border-radius: 5;" text="Poule (75$)" />
+        <Button layoutX="391.0" layoutY="285.0" onAction="#selectCow" style="-fx-background-color: white; -fx-border-color: #FF8C00; -fx-border-radius: 5;" text="Vache (125$)" />
+        <Button layoutX="484.0" layoutY="285.0" onAction="#selectPig" style="-fx-background-color: white; -fx-border-color: #FF8C00; -fx-border-radius: 5;" text="Cochon (200$)" />
+
+        <Button layoutX="320.0" layoutY="360.0" onAction="#sellEggs" style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-radius: 5;" text="Vendre Oeufs" />
+        <Button layoutX="413.0" layoutY="360.0" onAction="#sellMilk" style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-radius: 5;" text="Vendre Lait" />
+        <Button layoutX="494.0" layoutY="360.0" onAction="#sellBacon" style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-radius: 5;" text="Vendre Bacon" />
+
+        <GridPane fx:id="animalGrid" layoutX="425.0" layoutY="85.0" prefHeight="151.0" prefWidth="160.0" />
+
+        <Label layoutX="345.0" layoutY="90.0" style="-fx-font-weight: bold; -fx-text-fill: #3E2723;" text="ALIMENTS :" />
+        <Label fx:id="animalStockLabel" layoutX="345.0" layoutY="110.0" prefHeight="80.0" prefWidth="80.0" style="-fx-text-fill: #8B4513;" text="Oeufs : 0&#10;Lait : 0&#10;Bacon : 0" />
+    </children>
+</Pane>
