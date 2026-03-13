@@ -1,0 +1,32 @@
+GAME FARM
+
+⚙️ Le Mécanisme de jeu (Gameplay)
+Le cœur du jeu repose sur un cycle Achat ➔ Production ➔ Vente.
+
+Le Cycle Végétal :
+
+Tu achètes des graines dans le Store.
+
+Quand tu plantes, une Timeline (chronomètre) se lance. La plante passe de l'état "Pousse" à l'état "Prêt" après quelques secondes.
+
+Une fois récolté, le légume rejoint ton Inventory pour être revendu ou utilisé comme nourriture.
+
+Le Cycle Animal :
+
+Contrairement aux plantes, les animaux ont besoin de toi pour produire.
+
+Nourrissage : Pour obtenir une ressource (œuf, lait, bacon), tu dois posséder le légume spécifique dans ton inventaire. L'animal "mange" le légume et lance sa production.
+
+Récolte : Une fois le temps écoulé, le produit est stocké dans l' Inventory2.
+
+La Grille de Jeu :
+
+Le terrain est composé de cases (Plot). Chaque case est intelligente : elle sait si elle est vide, si quelque chose y pousse, et si c'est prêt à être ramassé.
+
+💾 Sauvegarde
+Le jeu enregistre automatiquement ton argent, tes graines et tes stocks de produits dans un fichier JSON à chaque fois que tu fermes la fenêtre. Quand tu relances le jeu, tu retrouves ton inventaire exactement comme tu l'as laissé.
+
+🛠 Choix Techniques simples
+Héritage : Toutes les plantes utilisent la même base (Plant), et tous les animaux utilisent Animal. C'est ce qui permet d'ajouter un nouveau contenu (comme une citrouille ou un cochon) en quelques lignes de code seulement.
+
+Interface Réactive : L'affichage se met à jour en temps réel grâce à la méthode updateUI(), qui rafraîchit les étiquettes (argent, stocks) après chaque action.
